@@ -1,0 +1,28 @@
+# ════════════════════════════════════════════════════════════════════
+# ⚠️  IMPORTANT: Rename this file to .gitignore
+# ════════════════════════════════════════════════════════════════════
+# 
+# تجاهل الملفات المحلية في Supabase
+# Ignore local Supabase files
+#
+# STEPS TO FIX:
+# 1. Download this file
+# 2. Rename to: .gitignore (with dot at the beginning)
+# 3. Upload to: /supabase/.gitignore
+# 4. Delete the old 'gitignore' folder
+#
+# ════════════════════════════════════════════════════════════════════
+
+# Supabase Local Development
+.branches
+.temp
+.env
+.env.local
+
+# Functions Build
+functions/**/*.map
+functions/**/node_modules/
+
+# Docker & Volumes
+docker/
+volumes/

@@ -1,0 +1,44 @@
+# Supabase Configuration for Baity Platform
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "storage"]
+extra_search_path = ["public"]
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 15
+
+[studio]
+enabled = true
+port = 54323
+
+[inbucket]
+enabled = true
+port = 54324
+
+[storage]
+enabled = true
+file_size_limit = "10MB"
+
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+additional_redirect_urls = []
+jwt_expiry = 3600
+enable_signup = true
+
+[edge_functions]
+enabled = true
+
+# ─── ONLY this function is deployed ───────────────────────────────────────────
+# server/ and funcignore/ directories contain no Deno.serve() and are NOT functions
+[[edge_functions.functions]]
+name = "baity-api"
+verify_jwt = false
+
+[[edge_functions.functions]]
+name = "server"
+verify_jwt = false

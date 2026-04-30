@@ -1,0 +1,24 @@
+# ════════════════════════════════════════════════════════════════════
+# ⚠️  IMPORTANT: Rename this file to .funcignore
+# ════════════════════════════════════════════════════════════════════
+# 
+# يمنع نشر Edge Functions غير المطلوبة
+# Prevents deployment of unwanted Edge Functions
+#
+# STEPS TO FIX:
+# 1. Download this file
+# 2. Rename to: .funcignore (with dot at the beginning)
+# 3. Upload to: /supabase/functions/.funcignore
+# 4. Delete the old 'funcignore' folder
+#
+# ════════════════════════════════════════════════════════════════════
+
+# استبعاد جميع الدوال ما عدا baity-api
+# Exclude all functions except baity-api
+server/
+make-server/
+_shared/
+*/test.ts
+*/test.tsx
+*.test.ts
+*.test.tsx
